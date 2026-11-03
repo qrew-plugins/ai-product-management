@@ -55,8 +55,8 @@ Your own banks (a company grounding document, SOPs, standards) are added during 
 
 ## Install
 
-- **Claude desktop or claude.ai:** Customize → Plugins → Add → add a marketplace from a repository → `YOUR-ORG/ai-product-management` → Install AI Product Management.
-- **Claude Code:** `/plugin marketplace add YOUR-ORG/ai-product-management`, then `/plugin install ai-product-management@qrew-kits`.
+- **Claude desktop or claude.ai:** Customize → Plugins → Add → add a marketplace from a repository → `qrew-plugins/ai-product-management` → Install AI Product Management.
+- **Claude Code:** `/plugin marketplace add qrew-plugins/ai-product-management`, then `/plugin install ai-product-management@qrew-kits`.
 - **From a file:** Customize → Plugins → upload the `.plugin` file.
 
 ## Getting started
