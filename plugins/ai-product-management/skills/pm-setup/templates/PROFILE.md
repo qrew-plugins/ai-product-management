@@ -4,6 +4,7 @@ Last updated {{DATE}}. The skills read this file first. Keep it current; when so
 
 ## Problem
 <!-- One sentence, in the owner's words. -->
+- **How we'll know it worked:** <!-- From Ground. Path A: "What you're hoping for" (a first guess). Path B: outcomes in place + ones to improve on. -->
 
 ## People
 | Role (their words) | Name | Part they play | Approves |
