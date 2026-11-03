@@ -1,0 +1,29 @@
+name: Suggest an idea
+description: A question it should ask, a step that could be smoother, or something it's missing.
+title: "[Idea] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would make it better?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why does it matter to you?
+      description: What were you trying to build or do when you thought of it?
+  - type: dropdown
+    id: step
+    attributes:
+      label: Which step does it affect?
+      options:
+        - Whole workflow
+        - 00 Setup
+        - 01 Ground
+        - 02 Scope
+        - 03 Build
+        - 04 Audit
+        - 05 Record
+        - 06 Package
