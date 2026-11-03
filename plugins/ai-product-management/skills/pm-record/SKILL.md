@@ -25,6 +25,7 @@ Wait for a yes before starting. During the step, give a progress check-in with t
 4. **Decisions and questions:** add rows for anything decided or left unanswered during the batch. Answered questions get their answer and decision ID.
 5. **Status:** update `apm/_index.md`: current step, last shipped batch with link to its summary, next batch, blocking questions. Set the next step to 04 Audit (`pm-audit`) when this batch produced the first screen or page people can use and nothing has been audited yet, when it was a fix batch, or when the next thing is a release. Otherwise the next batch in 03 Build.
 6. **Log:** append one line to `apm/log.md`: date · batch · what shipped · what's open.
+7. **Checking your result:** when the last Must slice ships (the first working version is in people's hands), write a short "Checking your result" note into the phase record and the handoff, and show it to the user. Use the template in `references/templates.md`. The plugin sets no reminder; checking is up to the user.
 
 ## At the end of a session
 
@@ -43,7 +44,7 @@ Every session ends here, whichever step it was in. Run this checklist and show i
 
 ## Tell the user
 
-Three to five lines: what shipped, what's open and who it waits on, and the next step. Link the summary and the handoff. If the profile lists a ~~chat channel for updates, offer to post the same lines there; post only on a yes.
+Three to five lines: what shipped, what's open and who it waits on, and the next step. Link the summary and the handoff. If the profile lists a ~~chat channel for updates, offer to post the same lines there; post only on a yes. When step 7 ran, end with the "Checking your result" note.
 
 ## Rules
 
