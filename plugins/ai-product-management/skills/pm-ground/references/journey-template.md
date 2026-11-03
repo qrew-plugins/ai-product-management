@@ -16,6 +16,15 @@ Interviewed: {{who}} · {{DATE}} · Material reviewed: {{boards, sheets, reports
 | # | Improvement | Stage it helps | Owner's priority | Notes |
 |---|---|---|---|---|
 
+## How we'll know it worked
+<!-- Path B: outcomes already in place (with decision IDs), then future outcomes. Path A: "What you're hoping for", labelled as a first guess. -->
+
+## Feedback from users
+<!-- Only if shared. Source IDs, and what it says about which stage. Parked: <one line>. -->
+
+## Worth-it check
+<!-- Only if taken: the three answers and the decision ID. -->
+
 ## Proposed first build order
 <!-- Marked PROPOSED until the owner approves; then logged as a decision. -->
 
