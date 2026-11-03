@@ -8,8 +8,8 @@ Turn an idea for a tool, dashboard or app into a working product with Claude. Th
 
 ### Install
 
-- **Claude desktop or claude.ai:** Customize → Plugins → Add → Add marketplace → enter `YOUR-ORG/ai-product-management` → install **AI Product Management**.
-- **Claude Code:** `/plugin marketplace add YOUR-ORG/ai-product-management`, then `/plugin install ai-product-management@qrew-kits`.
+- **Claude desktop or claude.ai:** Customize → Plugins → Add → Add marketplace → enter `qrew-plugins/ai-product-management` → install **AI Product Management**.
+- **Claude Code:** `/plugin marketplace add qrew-plugins/ai-product-management`, then `/plugin install ai-product-management@qrew-kits`.
 
 Plugins need a paid Claude plan.
 
