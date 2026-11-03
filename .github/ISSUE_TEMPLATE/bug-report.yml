@@ -1,0 +1,58 @@
+name: Report a problem
+description: Something in the plugin didn't work, got stuck, or did something unexpected.
+title: "[Problem] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for trying AI Product Management. Please leave out client names, passwords, keys and any personal or business data.
+  - type: dropdown
+    id: step
+    attributes:
+      label: Which step were you in?
+      options:
+        - Start / not sure
+        - 00 Setup
+        - 01 Ground
+        - 02 Scope
+        - 03 Build
+        - 04 Audit
+        - 05 Record
+        - 06 Package
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you asked, and what Claude did.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect instead?
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where were you using it?
+      options:
+        - Claude desktop app (Cowork)
+        - claude.ai
+        - Claude Code
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Plugin version
+      description: Shown in your plugin list, or in plugin.json (for example 0.3.2).
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Screenshots or the text of an error message help.
