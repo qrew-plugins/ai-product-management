@@ -11,9 +11,9 @@ Learn how the work really happens before deciding what to build. The output is `
 
 Before the first question or action in this step, brief the person, following `../../PHASE-BRIEFING.md` (at the plugin root). It covers the full and short versions, the check-in, and what to do when someone asks to go shorter. For this step:
 - **Goal:** Understand how the work really happens before deciding what to build.
-- **What you'll ask:** A lot of questions, one at a time: the job stage by stage, who does what, where time goes, where errors and workarounds happen, and the real examples behind it. When you've shared material, only the gaps it doesn't answer.
-- **Typical time:** 20–40 min, sometimes more for a complex job.
-- **What they'll have at the end:** journey.md: the job mapped stage by stage, the pain points, and what a product could improve first.
+- **What you'll ask:** A lot of questions, one at a time: the job stage by stage, who does what, where time goes, where errors and workarounds happen, and the real examples behind it; then how you'll know it worked, and two optional checks at the end. When you've shared material, only the gaps it doesn't answer.
+- **Typical time:** 25–45 min, sometimes more for a complex job.
+- **What they'll have at the end:** journey.md: the job mapped stage by stage, the pain points, how you'll know it worked, and what a product could improve first.
 
 Wait for a yes before starting. During the step, give a progress check-in with the status map about every 30 minutes of working time (see "Progress check-ins" in `../../PHASE-BRIEFING.md`). When the step finishes, write its phase record automatically (see "Phase record" in the same file). If someone asks to skip or shorten this step, push back once, offer to keep going, come back later, or go shorter with the skipped items recorded, and then respect their choice. Approval gates never shorten.
 
@@ -22,7 +22,7 @@ Wait for a yes before starting. During the step, give a progress check-in with t
 1. Read `apm/PROFILE.md`, `apm/CONTEXT.md` and every bank listed in the profile's Banks table.
 2. Check **Starting point** in the profile.
    - **B. Improving what exists:** read `apm/sources/_inventory.md`, `apm/sources/_summary.md` and every source item. Open by showing the summary in a few lines and asking what is wrong or missing. After that, ask only about what the sources don't answer: gaps, contradictions, workarounds and the parts that live in people's heads. Never ask what a source already answers; confirm it instead ("S03 shows invoices are approved in the sheet. Still true?"). New material shared during the interview gets an inventory row first.
-   - **A. Starting fresh:** run an ideation interview. Cover the problem and who has it, what people do today instead (even if it's manual or nothing), what a good outcome looks like and how they would know, and the smallest first version they would be happy with. Invite examples, sketches or tools they admire; save them to `apm/sources/` with inventory rows.
+   - **A. Starting fresh:** run an ideation interview. Cover the problem and who has it, what people do today instead (even if it's manual or nothing), what a good outcome looks like (how they'll know it worked is asked once, in "What to cover"), and the smallest first version they would be happy with. Invite examples, sketches or tools they admire; save them to `apm/sources/` with inventory rows.
    - Either way, ask for the real material behind the work: the board, sheet, report, form or screen people use today. Real material beats a description; a description beats a guess.
 3. Confirm in one message: whose work is being walked through, from which trigger to which finish line.
 
@@ -44,6 +44,24 @@ Walk the job in order. For each stage, capture:
 - Where the written process (if a bank holds one) differs from what really happens. Differences are findings; note each.
 
 Then ask what a better day would look like, and which stage matters most to fix first.
+
+Then ask how they'll know it worked. Word it by starting point:
+- **A. Starting fresh:** "Once this is in use, what would tell you it's working?" Nothing exists yet to measure, so record the answer as **What you're hoping for**: a first guess, not a target. Never call it a goal, and never score it as pass or fail.
+- **B. Improving what exists:** "How will we know it worked? Are there outcomes already in place that this has to meet? And are there outcomes we'd like to improve on later?" Outcomes already in place are real requirements: record them as decision rows. Future outcomes go under **What you're hoping for**.
+
+One or two answers is enough. Don't turn this into a measurement exercise. Write the answer to the profile's **How we'll know it worked** line.
+
+## Before closing: optional checks
+
+Ask these one at a time. Each is optional; a "no" skips it with nothing recorded against the person.
+
+1. **Feedback from users (both paths):** "Do you have any feedback from the people who'll use this, such as comments, survey results, emails or complaints? If so, share it here." If they share it, save it to `apm/sources/` with an inventory row, and pull out only what touches the stages and problems already in the journey. Anything else goes in one "Parked" line in the journey doc, without discussion. Don't reopen the interview or chase new topics from it.
+2. **Is it worth building? (path B only; on path A this is offered at the prototype review in `pm-build`):** "Before we scope the first working version, want to take 5 minutes to check whether it's worth building?" On a yes, ask three gut-check questions, one at a time. No cost math, no hours or wages:
+   - "If this works, is it a small, medium or big difference for you?"
+   - "Is there anything simpler that would get you most of the way: a better spreadsheet, a tool you could buy, a change in how the work is done?" You may name one or two options you noticed in this interview.
+   - "How much time would you put into this before calling it?"
+
+   Record the answer as a decision row: go, go smaller, or stop. You can recommend; the owner decides, and their choice stands.
 
 ## Write the journey doc
 
