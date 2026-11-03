@@ -14,7 +14,7 @@ Whoever owns the problem: an owner, an operations or office manager, an analyst,
 |---|---|---|---|
 | Start | `pm-start` | Asks whether you're starting fresh or improving something that exists, and whether to build a clickable prototype in Claude first or go straight to the MVP; or finds where a project stands and suggests the next step | A short status |
 | 00 Setup | `pm-setup` | Creates the project folder, profile and reference banks; picks a test setup. When improving something that exists, gathers your docs, screenshots, exports and code about it | `apm/` workspace, `sources/` |
-| 01 Ground | `pm-ground` | Interviews the problem owner about the real work, using real material | Journey doc, improvement list, proposed build order |
+| 01 Ground | `pm-ground` | Interviews the problem owner about the real work, using real material | Journey doc, how you'll know it worked, improvement list, proposed build order |
 | 02 Scope | `pm-scope` | Settles the decision tree one question at a time | Numbered decisions, open questions, glossary, decision notes, approved look-and-feel mockup, scope slices |
 | 03 Build | `pm-build` | Plans thin batches, then builds each approved one through an eight-step loop with independent review | The product, QA evidence |
 | 04 Audit | `pm-audit` | Checks what the build produced, with evidence and an independent verifier, once there's something people can use, after fix batches and before release | Findings ledger, fix briefs, fix batches |
@@ -64,6 +64,8 @@ Your own banks (a company grounding document, SOPs, standards) are added during 
 Connect a folder for the project, then say "start a product project". See `CONNECTORS.md` for optional connectors.
 
 ## Version
+
+0.3.3: Ground asks how you'll know it worked (a first guess when starting fresh; outcomes in place and ones to improve on when improving what exists), offers an optional check for feedback from the people who'll use it, and an optional gut check on whether it's worth building before the first working version. Record hands over a short note on checking your result after launch. Claude no longer uses labels it hasn't defined.
 
 0.3.2: asks at the start whether to build a clickable prototype in Claude first or go straight to the MVP. Setup records the code, tools, platforms and integrations that already exist or are required; Ground maps how information moves between tools today; Scope settles the build platform, integrations and who maintains it.
 
