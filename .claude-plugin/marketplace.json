@@ -1,0 +1,14 @@
+{
+  "name": "qrew-kits",
+  "description": "Free Claude plugins from QREW.",
+  "owner": {
+    "name": "QREW"
+  },
+  "plugins": [
+    {
+      "name": "ai-product-management",
+      "source": "./plugins/ai-product-management",
+      "description": "Scope, build and check a tool, dashboard or app with Claude, one approved step at a time."
+    }
+  ]
+}
