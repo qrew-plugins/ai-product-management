@@ -10,6 +10,7 @@ Used by `pm-ground` and `pm-scope`. The aim is shared understanding, reached in 
 - Every 8 to 10 questions, post a one-line status (settled / still open) and carry on. When a 30-minute progress check-in is due (`PHASE-BRIEFING.md`), it replaces this line. Don't offer to wrap up; if the person asks, follow "When someone wants to go shorter".
 
 ## Words
+- Never use a label the user hasn't heard from you before. That includes names you make up on the spot for a check, a step or an idea. Say it in plain words instead, or define it in the same sentence the first time. An undefined label reads as an assumption and costs the user's trust.
 - Use the user's names for tasks, roles, tools, records and documents exactly. Don't tidy, shorten or rename them.
 - When a new term is needed, say that you are proposing one, define it in one sentence, give an example from the conversation, and ask whether to adopt it or use their word instead. Log the outcome in `CONTEXT.md`.
 - Challenge thin reasoning, not vocabulary.
