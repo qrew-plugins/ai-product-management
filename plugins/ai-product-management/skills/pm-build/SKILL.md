@@ -36,6 +36,7 @@ When the profile's **Build path** is A, the first slice is a clickable prototype
 1. Build it as a Claude artifact from the approved look-and-feel mockup and the scoped jobs, with sample data or read-only data, clearly labelled "Prototype". It never writes to a system of record.
 2. Plan it as normal batches (approval, acceptance criteria, independent review), usually one or two.
 3. **Prototype review:** the problem owner, and ideally one or two real users, try it on the main jobs. Collect what worked, what confused them and what's missing, then record the outcome as a decision row: go to the MVP as scoped, change the scope first (hand over to `pm-scope`), or stop.
+   Before that decision, offer the worth-it check: "Before we build the first working version, want to take 5 minutes to check whether it's worth building?" Use the three questions in `../pm-ground/SKILL.md` ("Before closing: optional checks"). Never ask it before the prototype; prototyping to explore an idea is never questioned.
 4. Before the first MVP batch, the build platform must be decided (if it was left open in Scope, settle it now through `pm-scope`). The MVP is then built on that platform, reusing the prototype's approved layout and flow.
 
 On build path B, skip this section.
