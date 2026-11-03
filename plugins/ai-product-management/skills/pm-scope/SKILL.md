@@ -34,7 +34,7 @@ Follow `references/interview-rules.md`. For each branch:
 3. When the answer depends on another branch, settle that one first.
 4. Record the result immediately (below). Don't batch the writing up for later.
 
-Topics a full scope usually needs: who uses it and for which job; what it shows or does; what it looks like (section "Look and feel" below, required for anything people look at); where it's built and what it connects to (section "Build platform and integrations" below); where its data comes from and how fresh it must be; what it must never do (new invariants); how success is checked; what is explicitly out of scope; which parts can ship first.
+Topics a full scope usually needs: who uses it and for which job; what it shows or does; what it looks like (section "Look and feel" below, required for anything people look at); where it's built and what it connects to (section "Build platform and integrations" below); where its data comes from and how fresh it must be; what it must never do (new invariants); how success is checked (start from **How we'll know it worked** in `PROFILE.md`; confirm, don't re-ask); what is explicitly out of scope; which parts can ship first.
 
 ## Look and feel (any product people look at)
 
