@@ -129,7 +129,7 @@ These are starting estimates, refined from test runs. State them as ranges and n
 | Step | Typical time with the person |
 |---|---|
 | 00 Setup | 10–20 min, plus time to gather files when improving something that exists |
-| 01 Ground | 20–40 min |
+| 01 Ground | 25–45 min |
 | 02 Scope | 30–75 min, including the look-and-feel mockup review; larger products often take two sessions |
 | 03 Build | 20–45 min per batch, including review and approval; most projects run several batches |
 | 04 Audit | 15–30 min of the person's time to review findings (Claude does most of the checking) |
