@@ -12,7 +12,7 @@ This plugin runs one workflow. Each step has its own skill. This skill finds whe
 | Step | Skill | What it does | What it leaves behind | Typical time with the person |
 |---|---|---|---|---|
 | 00 Setup | `pm-setup` | Creates the project workspace, the project profile and the reference banks. When something already exists, gathers material about it | `apm/` folder, `PROFILE.md`, `banks/`, `sources/`, empty logs | 10–20 min, plus gathering files for B |
-| 01 Ground | `pm-ground` | Interviews the person who owns the problem about the real work, using real material | `journey.md` | 20–40 min |
+| 01 Ground | `pm-ground` | Interviews the person who owns the problem about the real work, using real material | `journey.md` | 25–45 min |
 | 02 Scope | `pm-scope` | Resolves the decision tree one question at a time | Decisions, open questions, glossary, approved look-and-feel mockup, scope slices, decision notes | 30–75 min, often two sessions |
 | 03 Build | `pm-build` | Plans thin batches, then builds one approved batch with independent review | Batch plan, the built increment, QA evidence | 20–45 min per batch |
 | 04 Audit | `pm-audit` | Checks what the build produced, with evidence and an independent verifier. Runs once the build has produced something people can use (the first usable screen or page), after every fix batch (re-audit), and before release | Findings ledger and fix briefs | 15–30 min of review |
@@ -64,7 +64,7 @@ If the answer is mixed (for example, a new app to replace a paper process), trea
 | | A. Starting fresh | B. Improving what exists |
 |---|---|---|
 | 00 Setup | Asks once for any existing notes or sketches, then the profile | Gathers material about what exists today into `apm/sources/` right after the workspace is created, before the profile interview (`pm-setup`, section 3) |
-| 01 Ground | Ideation interview: the problem, who has it, what people do instead today, what a good outcome looks like | Starts from the material: Claude summarizes what it learned, then asks only about gaps and contradictions |
+| 01 Ground | Ideation interview: the problem, who has it, what people do instead today, what a good outcome looks like | Starts from the material: Claude summarizes what it learned, then asks only about gaps and contradictions, plus outcomes already in place and ones to improve on |
 | After Ground | 02 Scope | 02 Scope. Problems in what exists today come in through `sources/` and Ground; Audit checks what this project builds |
 
 Record the answer in `apm/PROFILE.md` (pm-setup writes it once the profile exists) under Product as **Starting point**. If it changes later, update the profile and add a decision row.
@@ -95,6 +95,8 @@ Right after the build-path question, ask one yes/no question:
 
 ## Words this workflow uses (say them plainly the first time)
 
+Any other label: say it in plain words instead, or define it in the same sentence the first time (see "Words" in the interview rules).
+
 - **Banks:** reference files Claude checks against (your company doc, SOPs, accessibility rules).
 - **Sources:** your material showing how things work today.
 - **Gate:** a point where a named person must say yes.
@@ -106,6 +108,9 @@ Right after the build-path question, ask one yes/no question:
 - **System of record:** the real system your data lives in (accounting, CRM, the live app).
 - **MoSCoW:** Must, Should, Could, Won't this time.
 - **RAID:** risks, assumptions, issues, dependencies.
+- **MVP:** the first working version real people use, built on the real platform.
+- **Prototype:** a clickable try-out with sample data, built to explore an idea before anything real is built.
+- **What you're hoping for:** your best guess at what "working" will look like, used when nothing exists yet to measure.
 
 Use the plain words with the person; use a label only after explaining it once.
 
