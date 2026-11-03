@@ -89,6 +89,12 @@ One or two sentences.
 ## Shortened or skipped
 What, why, and the decision row that records it (or "Nothing").
 
+## Checking your result (only when the first working version has shipped)
+- What you were hoping for: <from PROFILE, word for word>
+- How to check it yourself: <one or two plain steps, using what they already have: a report, a count, asking the people who use it>
+- When: after a few weeks of real use.
+- If it didn't land: come back to this project. Say "rescope" to change what's being built, or "start over from Ground" with a clearer, more concrete idea of what you're hoping for. Either way, what you learned is kept.
+
 ## Next
 The next step, what it needs, and who starts it.
 ```
