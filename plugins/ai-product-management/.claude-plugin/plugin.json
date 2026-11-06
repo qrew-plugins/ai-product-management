@@ -1,8 +1,8 @@
 {
   "name": "ai-product-management",
   "displayName": "AI Product Management",
-  "version": "0.3.3",
-  "description": "A conversation-first method for scoping, building and documenting a product with Claude: set up, ground in the real work, scope through structured interviews (including look and feel), build in small approved batches with independent review, audit what the build produced, and record every decision and handoff.",
+  "version": "0.4.1",
+  "description": "A conversation-first method for scoping, building and documenting a product with Claude: set up, ground in the real work, scope through structured interviews (including look and feel), build in small approved batches with independent review, audit what the build produced, and record every decision and handoff, all fitted to the time you choose to put in, with an optional lighter path.",
   "author": {
     "name": "QREW Technologies"
   },
