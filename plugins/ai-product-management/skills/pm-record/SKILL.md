@@ -11,21 +11,22 @@ Close every batch and every session the same way, so nothing lives only in a con
 
 Before the first question or action in this step, brief the person, following `../../PHASE-BRIEFING.md` (at the plugin root). It covers the full and short versions, the check-in, and what to do when someone asks to go shorter. For this step:
 - **Goal:** Make sure nothing lives only in this conversation.
-- **What you'll ask:** Confirmation of what shipped, what's still open, and who picks up next.
+- **What you'll ask:** Confirmation of what shipped, what's still open, who picks up next, and roughly how much of your time this took.
 - **Typical time:** 5–10 min. After each batch in the same session, the short briefing is enough.
 - **What they'll have at the end:** A run summary, an updated status and log and, when work continues later, a handoff.
 
-Wait for a yes before starting. During the step, give a progress check-in with the status map about every 30 minutes of working time (see "Progress check-ins" in `../../PHASE-BRIEFING.md`). When the step finishes, write its phase record automatically (see "Phase record" in the same file). If someone asks to skip or shorten this step, push back once, offer to keep going, come back later, or go shorter with the skipped items recorded, and then respect their choice. Approval gates never shorten.
+Wait for a yes before starting, unless the person already asked to start this step; then go straight into the first question ("The briefing" in `../../PHASE-BRIEFING.md`). Open with the one-line status. During the step, give a progress check-in with the status map about every 30 minutes of working time (see "Progress check-ins" in `../../PHASE-BRIEFING.md`). When the step finishes, write its phase record automatically (see "Phase record" in the same file). If someone asks to skip or shorten this step, push back once, offer to keep going, come back later, or go shorter with the skipped items recorded, and then respect their choice. Approval gates never shorten.
 
 ## After a batch
 
-1. **Run summary:** write `apm/runs/<date>-<batch>/SUMMARY.md` using `references/templates.md`. Include what shipped, the version or link, each acceptance criterion with its result, the reviewer's findings and what happened to each, what couldn't be checked and why, and anything left open.
+1. **Run summary:** write `apm/runs/<date>-<batch>/SUMMARY.md` using `references/templates.md`. Include what shipped, the version or link, each acceptance criterion with its result, the reviewer's findings and what happened to each (including the person's call on every finding not fixed), what couldn't be checked and why, and anything left open.
 2. **Ledger:** if the batch came from audit briefs, leave each brief at `in-build` in `apm/audit/LEDGER.md` and set the next step to a re-audit (`pm-audit`). Only the re-audit moves briefs to `verified-fixed` or `regressed`, so the builder never signs off its own fixes.
 3. **Plan:** set the batch's status to `shipped` in `apm/plan/batches.md` and in the `_index.md` Batches table, and, if used, update progress and actual hours in `plan/project-plan.csv` (read actual hours from the ~~time tracker if the profile lists one).
 4. **Decisions and questions:** add rows for anything decided or left unanswered during the batch. Answered questions get their answer and decision ID.
 5. **Status:** update `apm/_index.md`: current step, last shipped batch with link to its summary, next batch, blocking questions. Set the next step to 04 Audit (`pm-audit`) when this batch produced the first screen or page people can use and nothing has been audited yet, when it was a fix batch, or when the next thing is a release. Otherwise the next batch in 03 Build.
 6. **Log:** append one line to `apm/log.md`: date · batch · what shipped · what's open.
-7. **Checking your result:** when the last Must slice ships (the first working version is in people's hands), write a short "Checking your result" note into the phase record and the handoff, and show it to the user. Use the template in `references/templates.md`. The plugin sets no reminder; checking is up to the user.
+7. **Midpoint check-in and end question:** check whether either is due and ask it ("Midpoint check-in" and "End question" in `../../PHASE-BRIEFING.md`). The midpoint check-in is due when this batch produced the first screen, page or output people can use, or the time used has reached about half the limit, whichever comes first. The end question is due when the last Must slice ships (the first working version is in people's hands), or when the time limit is reached and the person chooses to wrap up. Each is asked once per project; record the answers in `_index.md`.
+8. **Checking your result:** when the last Must slice ships, after the end question, write a short "Checking your result" note into the phase record and the handoff, and show it to the user. Use the template in `references/templates.md`. The plugin sets no reminder; checking is up to the user.
 
 ## At the end of a session
 
@@ -40,11 +41,14 @@ Every session ends here, whichever step it was in. Run this checklist and show i
 - Point to files by path; don't copy their contents.
 - Say what a fresh reader would most likely get wrong (terms, earlier decisions, permissions).
 - List the next step and which skill starts it.
+- End with plain steps to resume ("How to resume" in the template): open a new task or chat, connect the project folder (name it), and say "resume the project".
 - Leave out passwords, keys, personal data, and customer or business records.
+8. **Time used:** one entry in the Time used table in `_index.md` covering this session, and the **Time used** line updated. Ask one question: "Roughly how much of your time did this session take?" Suggest an estimate from timestamps when a shell is available. Skip it only if a phase close already recorded this session's time. Then check whether the midpoint check-in is due or the time limit has been reached ("Time limit" in `../../PHASE-BRIEFING.md`).
+9. **Conversation log:** write `apm/conversation-logs/<date>-<topic>.md` without being asked (template in `references/templates.md`): each question asked and the answer, in words and in order, plus the decisions, open questions and files that changed. Summarize long answers faithfully; leave out passwords, keys and personal data. It's for reviewing how the session went later.
 
 ## Tell the user
 
-Three to five lines: what shipped, what's open and who it waits on, and the next step. Link the summary and the handoff. If the profile lists a ~~chat channel for updates, offer to post the same lines there; post only on a yes. When step 7 ran, end with the "Checking your result" note.
+Open with the one-line status ("One-line status" in `../../PHASE-BRIEFING.md`). Then three to five lines: what shipped, what's open and who it waits on, and the next step. Link the summary, the handoff and the conversation log. When a handoff was written, end with its resume steps. If the profile lists a ~~chat channel for updates, offer to post the same lines there; post only on a yes. When step 8 ran, end with the "Checking your result" note.
 
 ## Rules
 

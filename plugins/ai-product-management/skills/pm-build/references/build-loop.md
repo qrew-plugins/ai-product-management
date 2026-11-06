@@ -6,11 +6,11 @@
 |---|---|---|---|
 | 1 | Scope pass | Every change maps to an active decision or an approved brief | List of decision IDs touched |
 | 2 | Exact edits | Only named parts changed; previous version kept | Edit script or change list; previous version |
-| 3 | Acceptance tests | Each criterion has a passing check | Test output per criterion |
-| 4 | Layout and accessibility | No new accessibility failures; layout holds at every width checked | Harness report, screenshots, comparison with last run |
+| 3 | Acceptance tests | Each criterion has a passing check; the number check matches the known figures, or a decision says how to proceed | Test output per criterion; the side-by-side figures |
+| 4 | Layout and accessibility | No new accessibility failures; layout holds at every width checked; no screen is denser or harder to read than the approved mockup at the real volume of data | Harness report, screenshots, comparison with last run and with the mockup |
 | 5 | Contract check | No unapproved connectors, writes, permissions, libraries or styles; invariants hold | Before/after counts, invariant checklist |
 | 6 | Independent review | Reviewer returned reproduced findings, or none | Reviewer report and its tests |
-| 7 | Fix and re-check | Confirmed findings fixed; reviewer's tests pass | Fix list, re-run output |
+| 7 | Fix and re-check | Confirmed findings fixed; reviewer's tests pass; every finding not fixed has the person's call | Fix list, re-run output, the person's call on each unfixed finding |
 | 8 | Publish | Owner-visible version updated | Version or link |
 
 ## Test setup by product type

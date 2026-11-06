@@ -4,3 +4,10 @@ Material that shows what exists today. Starting point B fills this during setup;
 
 | ID | Item | Type | What it shows | Shared by | Added | Location |
 |---|---|---|---|---|---|---|
+
+## Not used
+
+Items found during setup that the owner said don't belong to this project. Not read; listed so later steps skip them too.
+
+| Item | Location | Noted |
+|---|---|---|

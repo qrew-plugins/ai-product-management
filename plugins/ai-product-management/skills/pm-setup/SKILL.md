@@ -11,15 +11,15 @@ Set up everything the later steps rely on: one workspace folder, a project profi
 
 Before the first question or action in this step, brief the person, following `../../PHASE-BRIEFING.md` (at the plugin root). It covers the full and short versions, the check-in, and what to do when someone asks to go shorter. For this step:
 - **Goal:** Set up the project's workspace and profile, so every later step works from facts rather than guesses.
-- **What you'll ask:** Where the project should live. Then any material you have: required when improving something that exists (docs, sheets, screenshots, exports, code), optional when starting fresh. Then about 10 profile questions, one at a time: who owns the problem, who approves what, the tools you use, and a safe test record.
+- **What you'll ask:** Where the project should live. Then any material you have: required when improving something that exists (docs, sheets, screenshots, exports, code), optional when starting fresh. Claude lists what it found and asks which items belong before reading them. Then about 12 profile questions (about 9 on the lighter path), one at a time: who owns the problem, who approves what, the tools you use, the names to spell the same way every time, and a safe test record.
 - **Typical time:** 10–20 min, plus time to gather files when improving something that exists.
 - **What they'll have at the end:** The apm/ project folder, a confirmed profile and an inventory of your material.
 
-Wait for a yes before starting. During the step, give a progress check-in with the status map about every 30 minutes of working time (see "Progress check-ins" in `../../PHASE-BRIEFING.md`). When the step finishes, write its phase record automatically (see "Phase record" in the same file). If someone asks to skip or shorten this step, push back once, offer to keep going, come back later, or go shorter with the skipped items recorded, and then respect their choice. Approval gates never shorten.
+Wait for a yes before starting, unless the person already asked to start this step; then go straight into the first question ("The briefing" in `../../PHASE-BRIEFING.md`). Open with the one-line status. During the step, give a progress check-in with the status map about every 30 minutes of working time (see "Progress check-ins" in `../../PHASE-BRIEFING.md`). When the step finishes, write its phase record automatically (see "Phase record" in the same file). If someone asks to skip or shorten this step, push back once, offer to keep going, come back later, or go shorter with the skipped items recorded, and then respect their choice. Approval gates never shorten.
 
 ## 0. Starting point
 
-If `pm-start` already asked the starting-point, build-path and cost-updates questions, use those answers. Otherwise ask them now, one at a time, worded as in `../pm-start/SKILL.md` ("Starting point", "Build path", "Cost updates"). Write all three into the profile under Product as soon as section 2 has created it.
+If `pm-start` already asked the opening questions (existing material, starting point, build path, time limit, full or lighter path, cost updates), use those answers. Otherwise ask them now, one at a time, worded as in `../pm-start/SKILL.md` ("Existing material", "Starting point", "Build path", "Time limit", "Full or lighter path", "Cost updates"). Write the answers into the profile under Product as soon as section 2 has created it.
 
 ## 1. Pick the location
 
@@ -27,7 +27,7 @@ Ask where the project should live. Use a folder the user has connected. Create `
 
 ## 2. Create the workspace
 
-Copy every file from this skill's `templates/` folder into `apm/`, keeping names. Then create these empty folders: `scope/`, `adr/`, `plan/`, `audit/out-of-scope/`, `runs/`, `handoffs/`, `banks/`, `sources/`, `scope/mockups/`, `records/`. The layout and what each file is for are in `templates/README.md`; copy that too.
+Copy every file from this skill's `templates/` folder into `apm/`, keeping names. Then create these empty folders: `scope/`, `adr/`, `plan/`, `audit/out-of-scope/`, `runs/`, `handoffs/`, `banks/`, `sources/`, `scope/mockups/`, `records/`, `conversation-logs/`. The layout and what each file is for are in `templates/README.md`; copy that too.
 
 Replace `{{PROJECT}}` and `{{DATE}}` in every copied file. Dates are YYYY-MM-DD in the user's time zone.
 
@@ -49,11 +49,12 @@ Ask for everything in one message, with these examples. Say there is no limit an
 
 How to collect:
 1. Small items can be attached to the chat or pasted. For many files or a codebase, ask the user to connect the folder or drop the files into `apm/sources/`.
-2. Save a copy of each attached or pasted item into `apm/sources/` (pasted text as a `.md` file). For a connected folder or codebase, don't copy it; record where it is.
-3. Read every item and look at every image. For code, note what it does, the language or platform, and where its data comes from and goes.
-4. Add a row for each item to `apm/sources/_inventory.md`: ID (S01, S02 …), item, type, what it shows (one line), shared by, date added, location.
-5. Keep accepting material until the user says that's everything, or says they have none yet. More can be added at any later step; each new item gets an inventory row.
-6. Write `apm/sources/_summary.md`: the stages of the current work as the sources show them, the tools and records involved, and every gap or contradiction between sources, each citing source IDs. Gaps go to `open-questions.csv`. Don't fill them in.
+2. **Screen before reading.** When material arrives as a folder or several files, first list what you found: name, type and a one-line guess from the name. Ask one question: which of these belong to this project? Read only those. List the rest under "Not used" in `apm/sources/_inventory.md`, so later steps don't read them either.
+3. Save a copy of each attached or pasted item that belongs into `apm/sources/` (pasted text as a `.md` file). For a connected folder or codebase, don't copy it; record where it is.
+4. Read every item that belongs and look at every image. For code, note what it does, the language or platform, and where its data comes from and goes.
+5. Add a row for each item to `apm/sources/_inventory.md`: ID (S01, S02 …), item, type, what it shows (one line), shared by, date added, location.
+6. Keep accepting material until the user says that's everything, or says they have none yet. More can be added at any later step; each new item gets an inventory row.
+7. Write `apm/sources/_summary.md`: the stages of the current work as the sources show them, the tools and records involved, and every gap or contradiction between sources, each citing source IDs. Gaps go to `open-questions.csv`. Don't fill them in.
 
 Privacy and safety:
 - Sources show how the work is done, not the business's records. If an item contains personal or customer data (names, contact details, account numbers, health details), ask the user to remove or blur it, or to share a sample without it. Don't save personal data into the workspace.
@@ -75,6 +76,10 @@ Privacy and safety:
 9. Rules the product must never break (invariants). It is fine to have none yet; the audit and build steps add to this list.
 10. The test record to use for live tests, if one exists yet. Live tests run only on this record unless the approver names another at the time.
 11. Only if **Cost updates** is yes: how Claude is paid for. Options are a subscription plan (Pro, Max, Team or an Enterprise seat), usage-based or API billing, or not sure. Skip this question when the answer is no. Say why you're asking: it decides whether cost means usage limits or money when the build phase comes up (`../../PHASE-BRIEFING.md`, "Talking about cost").
+12. **Names to spell the same way every time:** draft a list from the sources and answers so far (people, clients, companies, tools and systems), each with its exact spelling, and ask the person to confirm or correct it as one question. Voice-to-text and quick typing produce several spellings of the same name; this list fixes one. Record it in the Names table in `apm/CONTEXT.md` with the other spellings heard, and use only the confirmed spelling in every record.
+13. **Versions (starting point B only):** "What do people call the version they use today, and what should we call the new one?" Record both under Product and in `apm/CONTEXT.md`.
+
+**Lighter path:** ask 1–6, 10, 12 and 13 (and 11 when cost updates is yes). Skip 7–9 and use the defaults: the problem owner approves every gate, rules the product must never break are added as they come up, and tools are asked about in Scope only if the build needs them. Record each one left unasked as an open question.
 
 Write unknowns as open questions in `apm/open-questions.csv`, never as guesses.
 
@@ -96,7 +101,8 @@ Read this plugin's `skills/pm-build/references/build-loop.md` (from this skill's
 
 ## 7. Close
 
-- Fill `_index.md`: current step "00 Setup (done)", Steps table row 00 marked done, next step "01 Ground". For starting point B, note how many sources were gathered.
+- Run "Before a phase closes" in `../../PHASE-BRIEFING.md` (open questions, time used).
+- Fill `_index.md`: current step "00 Setup (done)", Steps table row 00 marked done, next step "01 Ground", and the **Path**, **Time limit** and **Time used** lines. For starting point B, note how many sources were gathered.
 - Add the first line to `log.md`.
 - Write the 00 Setup phase record ("Phase record" in `../../PHASE-BRIEFING.md`). Mention that a record is saved automatically at the end of every phase, in `apm/records/` unless they'd like a different folder; if they name one, record it in the profile.
 - Tell the user in three lines what was created and what the next step is. Offer to start `pm-ground`.

@@ -17,6 +17,9 @@ Last updated {{DATE}}. The skills read this file first. Keep it current; when so
 
 ## Product
 - **Starting point:** <!-- A. Starting fresh / B. Improving what exists (asked by pm-start) -->
+- **Version names:** <!-- starting point B only: what the version in use today is called, and what the new one will be called -->
+- **Time limit:** <!-- hours of the owner's own time, from setup to a first working version (asked by pm-start). Every step fits the plan to it -->
+- **Path:** <!-- Full / Lighter (asked by pm-start). Lighter-path caps: PHASE-BRIEFING.md, "The lighter path" -->
 - **Type:** <!-- dashboard or report / web page or app / spreadsheet model / automation or script / document / other -->
 - **Where it lives and how it is published:**
 - **Test setup:** <!-- from pm-build references/build-loop.md -->
@@ -26,6 +29,17 @@ Last updated {{DATE}}. The skills read this file first. Keep it current; when so
 - **Build platform:** <!-- decided in 02 Scope (decision ID); on build path A it can wait until after the prototype -->
 - **Cost updates:** <!-- yes / no (asked by pm-start). No or blank: never mention cost unless asked -->
 - **How Claude is paid for:** <!-- only when cost updates = yes: subscription (Pro / Max / Team / Enterprise seat) / usage-based or API / not sure -->
+
+## Numbers
+<!-- From 01 Ground, only when the product shows or calculates numbers. Build checks its numbers against the known figures before building more screens. -->
+
+### How the numbers are defined
+| Number | Unit | How it's worked out | Period, cutoff and time zone (and whether a period is labelled by its start or end date) | Comes from | Source that wins if two disagree |
+|---|---|---|---|---|---|
+
+### Known figures to check against
+| Figure | Value | Period | Source | Confirmed by |
+|---|---|---|---|---|
 
 ## Tools and resources
 | Resource | What it is (code, repo, platform, account, integration) | Allowed for this build? | Notes |

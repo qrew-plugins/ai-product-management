@@ -9,7 +9,7 @@ Check what the build produced, with evidence, before it counts as done. The audi
 
 **Never before Build.** If `apm/_index.md` shows no shipped batch yet, don't audit. Say so, show the status map, and route: on a starting-point B project, problems in what exists today go into `apm/sources/` and Ground or Scope, not into an audit. Offer `pm-start` to pick the right step.
 
-Run it when the build first produces something people can use (the first usable screen or page), after every fix batch (re-audit), and before release. A product with nothing for people to look at (for example a script or a scheduled job) can skip it: record the skip and the reason as a decision row, never skip silently.
+Run it when the build first produces something people can use (the first usable screen or page), after every fix batch (re-audit), and before release. A product with nothing for people to look at (for example a script or a scheduled job) can skip it: record the skip and the reason as a decision row, never skip silently. On the lighter path, the audit is optional: offer it once, when the first usable screen or page ships, as a plain question ("Would you like Claude to check what's been built for problems with usability and accessibility before going further?"); a no is recorded as a decision row (skipped by choice).
 
 ## Phase briefing (always first)
 
@@ -19,7 +19,7 @@ Before the first question or action in this step, brief the person, following `.
 - **Typical time:** 15–30 min of your time to review findings. The checking itself runs separately.
 - **What they'll have at the end:** A ledger of verified findings and build briefs for the ones you approve.
 
-Wait for a yes before starting. During the step, give a progress check-in with the status map about every 30 minutes of working time (see "Progress check-ins" in `../../PHASE-BRIEFING.md`). When the step finishes, write its phase record automatically (see "Phase record" in the same file). If someone asks to skip or shorten this step, push back once, offer to keep going, come back later, or go shorter with the skipped items recorded, and then respect their choice. Approval gates never shorten.
+Wait for a yes before starting, unless the person already asked to start this step; then go straight into the first question ("The briefing" in `../../PHASE-BRIEFING.md`). Open with the one-line status. During the step, give a progress check-in with the status map about every 30 minutes of working time (see "Progress check-ins" in `../../PHASE-BRIEFING.md`). When the step finishes, write its phase record automatically (see "Phase record" in the same file). If someone asks to skip or shorten this step, push back once, offer to keep going, come back later, or go shorter with the skipped items recorded, and then respect their choice. Approval gates never shorten.
 
 ## 0. Load
 

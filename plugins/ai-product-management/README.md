@@ -12,20 +12,26 @@ Whoever owns the problem: an owner, an operations or office manager, an analyst,
 
 | Step | Skill | What happens | What you get |
 |---|---|---|---|
-| Start | `pm-start` | Asks whether you're starting fresh or improving something that exists, and whether to build a clickable prototype in Claude first or go straight to the MVP; or finds where a project stands and suggests the next step | A short status |
+| Start | `pm-start` | Asks what you already have, whether you're starting fresh or improving something that exists, whether to build a clickable prototype in Claude first or go straight to the MVP, how many hours you want to put in, and whether you want the full or lighter path; or finds where a project stands and suggests the next step | A short status |
 | 00 Setup | `pm-setup` | Creates the project folder, profile and reference banks; picks a test setup. When improving something that exists, gathers your docs, screenshots, exports and code about it | `apm/` workspace, `sources/` |
 | 01 Ground | `pm-ground` | Interviews the problem owner about the real work, using real material | Journey doc, how you'll know it worked, improvement list, proposed build order |
 | 02 Scope | `pm-scope` | Settles the decision tree one question at a time | Numbered decisions, open questions, glossary, decision notes, approved look-and-feel mockup, scope slices |
 | 03 Build | `pm-build` | Plans thin batches, then builds each approved one through an eight-step loop with independent review | The product, QA evidence |
 | 04 Audit | `pm-audit` | Checks what the build produced, with evidence and an independent verifier, once there's something people can use, after fix batches and before release | Findings ledger, fix briefs, fix batches |
-| 05 Record | `pm-record` | Closes each batch and session | Run summary, log, status, handoff |
+| 05 Record | `pm-record` | Closes each batch and session | Run summary, log, status, time used, conversation log, handoff with resume steps |
 | 06 Package | `pm-package` | Turns a proven workflow into a reusable skill | Draft skill |
 
 Every phase ends with a phase record, written automatically to `apm/records/` (or a folder you choose) for record keeping. Build and Record repeat for every batch. Audit runs once the build produces something people can use, again after fix batches, and before release; its approved findings go back to Build. A batch that needs a new decision goes back to Scope for that one question first.
 
 ## What to expect
 
-This method asks a lot of questions on purpose: crawl, then walk, then sprint. Every step opens with a short briefing: what it's for, what you'll be asked, how long it usually takes and what you'll have at the end. Then it checks that now is a good time. A full first pass from setup to the first scope often takes 1–2 hours across one or more sessions. Each build batch then takes about 20–45 minutes of your time.
+This method asks a lot of questions on purpose: crawl, then walk, then sprint. Real product management takes weeks or months; this compresses it into hours or days. Every step opens with a one-line status and a short briefing: what it's for, what you'll be asked, how long it usually takes and what you'll have at the end. Then it checks that now is a good time (or goes straight in, if you've just asked to start). A full first pass from setup to the first scope often takes 1–2 hours across one or more sessions. Each build batch then takes about 20–45 minutes of your time.
+
+**Your time limit.** At the start you say how many hours you want to put in. Claude fits the plan to that number, keeps a running total, offers more time when the work won't fit (you decide), checks in about halfway, and at the end asks whether you got something you're happy with within that time.
+
+**Full or lighter path.** The lighter path, only if you choose it, runs the same steps with fewer questions, one mockup round and at most three build batches.
+
+**Questions.** One per message, the question first, in plain words. Short answers like "A" are repeated back in words, and each approval is asked on its own.
 
 If you ask to go faster, Claude pushes back once and gives you three choices: keep going, come back later, or go shorter. If you go shorter, whatever was skipped is recorded as open questions. You always decide. The approval gates below never shorten. Details are in `PHASE-BRIEFING.md`.
 
@@ -64,6 +70,10 @@ Your own banks (a company grounding document, SOPs, standards) are added during 
 Connect a folder for the project, then say "start a product project". See `CONNECTORS.md` for optional connectors.
 
 ## Version
+
+0.4.1: fixes from the first automated test run. Suggested answers are never guesses; unanswered parts of how a number is defined (including time zone) become open questions; Claude no longer narrates its record-keeping; phase record files are numbered by step.
+
+0.4.0: works within the time you set. Asks up front how many hours you want to put in and whether you want the full or the optional lighter path; fits the plan to that time, checks in about halfway and asks at the end whether you got something you're happy with. Every step opens with a one-line status. Stricter question rules: one question per message, question first, plain words, choices repeated back in words, one approval per question, no second yes to start a phase. Setup asks what you already have before the starting point, lists your files before reading them, and fixes the spelling of names and versions. Ground asks how the numbers are defined and for a few figures you trust; Build checks its numbers against them before building more screens. Mockups use realistic data and your brand, and the build is held to the mockup's density. Scope agrees what "done" looks like. Reviewer findings that weren't fixed come to you for a decision. Open questions are settled before each phase closes. Every session writes a conversation log, and handoffs end with plain resume steps. Cost updates, when you opt in, now come at fixed points.
 
 0.3.3: Ground asks how you'll know it worked (a first guess when starting fresh; outcomes in place and ones to improve on when improving what exists), offers an optional check for feedback from the people who'll use it, and an optional gut check on whether it's worth building before the first working version. Record hands over a short note on checking your result after launch. Claude no longer uses labels it hasn't defined.
 

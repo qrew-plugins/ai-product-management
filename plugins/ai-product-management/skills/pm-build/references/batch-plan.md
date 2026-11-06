@@ -8,6 +8,8 @@ All files live in `apm/plan/`.
 # Batch plan
 ## B04 · <name> · Status: proposed | approved (Dxx) | built | shipped
 - **From:** slice SL2 of scope/<improvement>.md, or ledger F-003, F-005
+- **Moves:** done lines 1, 3 (from the scope doc's "Done looks like")
+- **Time:** about N min of the person's time
 - **Rests on:** D12, D14
 - **Changes:** parts by name
 - **Must not change:** invariants I1, I3; neighbors by name

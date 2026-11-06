@@ -22,6 +22,8 @@
 <N> findings, all reproduced / <n> not reproduced (why). Each: ID · severity · what · fix · re-checked with the reviewer's test (path).
 <or: "Self-review only (small change): <why>">
 
+Not fixed in this batch: each finding not fixed, with the person's call: fix later in B.. / open question Q.. / won't fix D.. (or "None")
+
 ## Not checked
 - What couldn't run and why (for example, a live test waiting on a named record)
 
@@ -35,7 +37,7 @@
 
 ## Status (`_index.md`)
 
-Keep the top six lines and the Steps table current: Current step, Next step, Next batch, Last shipped, Last audit, Blocking questions. The status map reads its marks from the Steps table. Add a row to the Batches table with a link to the run summary.
+Keep the top lines and the Steps table current: Current step, Next step, Next batch, Last shipped, Last audit, Blocking questions, Path and Time limit, Time used, Midpoint check and End check. Add an entry to the Time used table at every phase close and session close. The status map reads its marks from the Steps table. Add a row to the Batches table with a link to the run summary.
 
 ## Handoff (`handoffs/<date>-<topic>.md`)
 
@@ -60,14 +62,38 @@ Written <date> by <who/Claude session> for <who or what comes next>.
 
 ## Next step
 - Skill: pm-<step> · First action: ...
+
+## How to resume
+1. Open a new task or chat in Claude.
+2. Connect the folder that holds `apm/`: <folder name or path>.
+3. Say "resume the project". Claude shows where things stand and picks up at <next step, in plain words>.
 ```
 
-## Phase record (`records/<YYYY-MM-DD>-<NN>-<step>.md`)
+## Conversation log (`conversation-logs/<date>-<topic>.md`)
+
+```md
+# <Project>: conversation log, <date>
+Step(s): <steps covered> · People: <who took part> · Time: about <n> hours
+
+## Questions and answers
+| # | Question asked (as sent) | Answer (in words, never just a letter) | Recorded as |
+|---|---|---|---|
+| 1 | ... | ... | D.. / Q.. / CONTEXT.md / none |
+
+## Decisions and open questions
+- New: D.., Q.. · Superseded: D.. by D..
+
+## Files changed
+- <path>: <what changed>
+```
+
+## Phase record (`records/<YYYY-MM-DD>-<NN>-<step>.md`, where `<NN>` is the step number: 00 Setup, 01 Ground …)
 
 ```md
 # <Project>: <NN> <Step> record
 Date(s): <start> to <end> · Written <date> · Status: done | shortened | skipped
 People: <who took part, roles in their words> · Approved by: <name> (Dxx)
+Time: about <n> hours in this phase · project total about <n> of the <n>-hour limit
 
 ## Goal of this phase
 One or two sentences.
@@ -90,6 +116,7 @@ One or two sentences.
 What, why, and the decision row that records it (or "Nothing").
 
 ## Checking your result (only when the first working version has shipped)
+- Within your time limit, did you get something you're happy with? <the end question's answer, word for word, and what was decided if no>
 - What you were hoping for: <from PROFILE, word for word>
 - How to check it yourself: <one or two plain steps, using what they already have: a report, a count, asking the people who use it>
 - When: after a few weeks of real use.
